@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReverseController {
     @GetMapping("/lab1/reverse/{string}")
     public String reverseString(@PathVariable("string") String string) {
-        return string;
+        return new StringBuilder(string).reverse().toString();
     }
 }
